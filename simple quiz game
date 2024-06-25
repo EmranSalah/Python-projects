@@ -1,0 +1,41 @@
+print(' welcome to computer quiz game! '.center(50, '='))
+playing = input('Do you want to play?\n')
+# This condition for checking user acceptance of playing game
+# This game is one chance anwser. 
+# Questions are static questions, but we can evaluate them by using dictionary contains questions as key and answer as value, and using random module.
+if playing.lower() != 'yes':
+    quit()
+print("Okay! let's play!:) ")
+# two variables for storing score and number of questions
+score, total_questions = 0, 4
+# The first question 
+answer = input('What is CPU stand for? ')
+if answer.lower() == 'central processing unit':
+    print("Correct!")
+    score +=1
+else:
+    print ('Incorrect!')
+answer = input('What is GPU stand for? ')
+if answer.lower() == 'graphical processing unit':
+    print("Correct!")
+    score +=1
+else:
+    print ('Incorrect!')
+
+answer = input('What is RAM stand for? ')
+if answer.lower() == 'random access memory':
+    print("Correct!")
+    score +=1
+else:
+    print ('Incorrect!')
+
+answer = input('What is PSU stand for? ')
+if answer.lower() == 'power supply unit':
+    print("Correct!")
+    score +=1
+else:
+    print ('Incorrect!')
+
+    
+print(f'You answered {score} of {total_questions} questions')
+print(f'You got {(score / total_questions) * 100}%')
